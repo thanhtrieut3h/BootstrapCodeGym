@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Giỏ hàng - ShopMode</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="home.html">
+                <i class="bi bi-bag-heart"></i> ShopMode
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Thời trang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Phụ kiện</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Giày dép</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
+                </ul>
+                <form class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <div class="d-flex gap-2">
+                    <a href="cart.html" class="btn btn-dark position-relative">
+                        <i class="bi bi-cart3"></i> <span class="badge bg-danger rounded-pill ms-1">3</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-person"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html" class="text-decoration-none">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- ========== GIỎ HÀNG ========== -->
+    <main class="container mb-5">
+        <div class="row g-4">
+            <!-- Cột sản phẩm trong giỏ -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-bottom-0 pt-4">
+                        <h2 class="h3 fw-bold mb-0"><i class="bi bi-cart3"></i> Giỏ hàng của bạn</h2>
+                        <p class="text-secondary mt-2">Có 3 sản phẩm trong giỏ hàng</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- Sản phẩm 1 -->
+                        <div class="row g-3 align-items-center mb-4 pb-3 border-bottom">
+                            <div class="col-md-2 col-4">
+                                <img src="https://placehold.co/200x200/eee/ddd?text=Áo+Thun+Cotton" class="img-fluid rounded-3" alt="Áo thun cotton">
+                            </div>
+                            <div class="col-md-4 col-8">
+                                <h6 class="fw-bold mb-1">Áo thun cotton 100%</h6>
+                                <div class="small text-secondary mb-2">
+                                    <span>Màu: Đen</span> | <span>Size: M</span>
+                                </div>
+                                <div class="d-md-none">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-primary fw-bold">299.000₫</span>
+                                        <button class="btn btn-link text-danger p-0"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <div class="input-group input-group-sm" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button">-</button>
+                                    <input type="text" class="form-control text-center" value="1" readonly style="max-width: 50px;">
+                                    <button class="btn btn-outline-secondary" type="button">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6 d-none d-md-block">
+                                <span class="fw-bold text-primary">299.000₫</span>
+                            </div>
+                            <div class="col-md-2 col-12 text-md-end">
+                                <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i> Xóa</button>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 2 -->
+                        <div class="row g-3 align-items-center mb-4 pb-3 border-bottom">
+                            <div class="col-md-2 col-4">
+                                <img src="https://placehold.co/200x200/eee/ddd?text=Quần+Jeans" class="img-fluid rounded-3" alt="Quần jeans">
+                            </div>
+                            <div class="col-md-4 col-8">
+                                <h6 class="fw-bold mb-1">Quần jeans rách cá tính</h6>
+                                <div class="small text-secondary mb-2">
+                                    <span>Màu: Xanh đen</span> | <span>Size: L</span>
+                                </div>
+                                <div class="d-md-none">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-primary fw-bold">559.000₫</span>
+                                        <button class="btn btn-link text-danger p-0"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <div class="input-group input-group-sm" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button">-</button>
+                                    <input type="text" class="form-control text-center" value="2" readonly style="max-width: 50px;">
+                                    <button class="btn btn-outline-secondary" type="button">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6 d-none d-md-block">
+                                <span class="fw-bold text-primary">1.118.000₫</span>
+                            </div>
+                            <div class="col-md-2 col-12 text-md-end">
+                                <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i> Xóa</button>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 3 -->
+                        <div class="row g-3 align-items-center mb-4 pb-3 border-bottom">
+                            <div class="col-md-2 col-4">
+                                <img src="https://placehold.co/200x200/eee/ddd?text=Giày+Thể+Thao" class="img-fluid rounded-3" alt="Giày thể thao">
+                            </div>
+                            <div class="col-md-4 col-8">
+                                <h6 class="fw-bold mb-1">Giày chạy bộ nhẹ</h6>
+                                <div class="small text-secondary mb-2">
+                                    <span>Màu: Trắng</span> | <span>Size: 41</span>
+                                </div>
+                                <div class="d-md-none">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-primary fw-bold">890.000₫</span>
+                                        <button class="btn btn-link text-danger p-0"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <div class="input-group input-group-sm" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button">-</button>
+                                    <input type="text" class="form-control text-center" value="1" readonly style="max-width: 50px;">
+                                    <button class="btn btn-outline-secondary" type="button">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6 d-none d-md-block">
+                                <span class="fw-bold text-primary">890.000₫</span>
+                            </div>
+                            <div class="col-md-2 col-12 text-md-end">
+                                <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i> Xóa</button>
+                            </div>
+                        </div>
+
+                        <!-- Mã giảm giá (mobile/desktop) -->
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Nhập mã giảm giá">
+                                    <button class="btn btn-outline-secondary" type="button">Áp dụng</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                <a href="home.html" class="btn btn-link text-decoration-none">
+                                    <i class="bi bi-arrow-left"></i> Tiếp tục mua sắm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ưu đãi đặc biệt -->
+                <div class="card border-0 bg-light mt-4">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <i class="bi bi-gift fs-3 text-warning me-2"></i>
+                                <strong>Ưu đãi đặc biệt:</strong>
+                                <span class="text-secondary">Mua thêm 200.000₫ để nhận miễn phí vận chuyển</span>
+                            </div>
+                            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 35%"></div>
+                                </div>
+                                <small class="text-secondary">Còn thiếu 200.000₫</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột thông tin đơn hàng -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm sticky-top" style="top: 90px;">
+                    <div class="card-header bg-white border-bottom-0 pt-4">
+                        <h3 class="h5 fw-bold mb-0">Thông tin đơn hàng</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Tạm tính -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-secondary">Tạm tính (3 sản phẩm)</span>
+                            <span class="fw-semibold">2.307.000₫</span>
+                        </div>
+                        <!-- Phí vận chuyển -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-secondary">Phí vận chuyển</span>
+                            <span class="fw-semibold text-success">Miễn phí</span>
+                        </div>
+                        <!-- Mã giảm giá (nếu có) -->
+                        <div class="d-flex justify-content-between mb-3 pb-2 border-bottom">
+                            <span class="text-secondary">Mã giảm giá</span>
+                            <span class="fw-semibold text-danger">-0₫</span>
+                        </div>
+                        <!-- Tổng cộng -->
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="h5 fw-bold">Tổng cộng</span>
+                            <span class="h5 fw-bold text-primary">2.307.000₫</span>
+                        </div>
+
+                        <!-- Nút thanh toán -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg"><i class="bi bi-credit-card"></i> Tiến hành thanh toán</button>
+                            <button class="btn btn-outline-success"><i class="bi bi-paypal"></i> Thanh toán qua PayPal</button>
+                        </div>
+
+                        <!-- Phương thức thanh toán -->
+                        <hr class="my-4">
+                        <h6 class="fw-bold mb-3">Chấp nhận thanh toán</h6>
+                        <div class="d-flex gap-2 justify-content-between">
+                            <i class="bi bi-credit-card-2-front fs-2 text-secondary"></i>
+                            <i class="bi bi-bank fs-2 text-secondary"></i>
+                            <i class="bi bi-wallet2 fs-2 text-secondary"></i>
+                            <img src="https://placehold.co/50x30/f4b400/white?text=VNPay" style="height: 30px;" alt="VNPay">
+                            <img src="https://placehold.co/50x30/00457C/white?text=Momo" style="height: 30px;" alt="Momo">
+                        </div>
+
+                        <!-- Chính sách -->
+                        <div class="alert alert-light mt-4 mb-0 small">
+                            <i class="bi bi-shield-check text-success"></i> Đảm bảo thanh toán an toàn<br>
+                            <i class="bi bi-arrow-repeat text-primary"></i> Đổi trả trong 30 ngày<br>
+                            <i class="bi bi-headset text-info"></i> Hỗ trợ 24/7
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gợi ý sản phẩm -->
+                <div class="card border-0 bg-light mt-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3"><i class="bi bi-lightbulb"></i> Gợi ý mua kèm</h6>
+                        <div class="d-flex gap-3 mb-3">
+                            <img src="https://placehold.co/80x80/eee/ddd?text=Mũ" class="rounded-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Mũ">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Mũ lưỡi trai unisex</h6>
+                                <div class="text-primary fw-bold">199.000₫</div>
+                                <button class="btn btn-sm btn-outline-primary mt-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <img src="https://placehold.co/80x80/eee/ddd?text=Tất" class="rounded-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Tất">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Tất cotton cao cấp (3 đôi)</h6>
+                                <div class="text-primary fw-bold">89.000₫</div>
+                                <button class="btn btn-sm btn-outline-primary mt-1">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SẢN PHẨM ĐỀ XUẤT ========== -->
+        <div class="mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 fw-bold"><i class="bi bi-star-fill text-warning"></i> Có thể bạn cũng thích</h2>
+                <a href="#" class="text-decoration-none">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="row g-4">
+                <!-- Sản phẩm đề xuất 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/400x400/eee/ddd?text=Áo+Khoác+Denim" class="card-img-top" alt="Áo khoác denim">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Giảm 25%</span>
+                            <h5 class="card-title fw-semibold">Áo khoác denim nam</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary">789.000₫</span>
+                                <span class="text-decoration-line-through text-secondary">1.050.000₫</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                            <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm đề xuất 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/400x400/eee/ddd?text=Đồng+Hồ" class="card-img-top" alt="Đồng hồ">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Hot</span>
+                            <h5 class="card-title fw-semibold">Đồng hồ nam thể thao</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary">2.490.000₫</span>
+                                <span class="text-decoration-line-through text-secondary">3.200.000₫</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                            <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm đề xuất 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/400x400/eee/ddd?text=Túi+Xách" class="card-img-top" alt="Túi xách">
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2">Mới</span>
+                            <h5 class="card-title fw-semibold">Túi xách da thật</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary">1.199.000₫</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                            <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm đề xuất 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/400x400/eee/ddd?text=Son+Lì" class="card-img-top" alt="Son môi">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Bán chạy</span>
+                            <h5 class="card-title fw-semibold">Son lì siêu mịn</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary">179.000₫</span>
+                                <span class="text-decoration-line-through text-secondary">299.000₫</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                            <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-body-tertiary pt-5 pb-4 border-top mt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold"><i class="bi bi-bag-heart"></i> ShopMode</h5>
+                    <p class="text-secondary">Nền tảng thời trang trực tuyến hàng đầu, mang đến phong cách đẳng cấp và chất lượng vượt trội.</p>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>Liên kết nhanh</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Trang chủ</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Sản phẩm</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Hỗ trợ khách hàng</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Vận chuyển & giao nhận</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Liên hệ</h6>
+                    <address class="text-secondary">
+                        <i class="bi bi-geo-alt"></i> 123 Đường Thời Trang, Quận 1, TP.HCM<br>
+                        <i class="bi bi-telephone"></i> 1900 1234<br>
+                        <i class="bi bi-envelope"></i> support@shopmode.vn
+                    </address>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center text-secondary small">
+                &copy; 2025 ShopMode - Tất cả các quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

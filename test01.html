@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ShopMode - Trang chủ thời trang & tiện ích</title>
+    <!-- Bootstrap 5.3 CSS (CDN chính thức) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (tăng tính trực quan, nhưng vẫn thuần Bootstrap style) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- không có CSS custom nào được viết thêm, chỉ dùng class thuần Bootstrap -->
+</head>
+<body>
+
+    <!-- ========== HEADER / NAVBAR (Bootstrap 5.3) ========== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <i class="bi bi-bag-heart"></i> ShopMode
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Thời trang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Phụ kiện</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Giày dép</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
+                </ul>
+                <form class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-dark position-relative">
+                        <i class="bi bi-cart3"></i> <span class="badge bg-danger rounded-pill ms-1">3</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-person"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO / CAROUSEL (Bootstrap carousel) ========== -->
+    <div id="heroCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- ảnh placeholder từ Bootstrap demo, dùng background màu + nội dung (hoàn toàn dùng class có sẵn) -->
+                <div class="bg-dark text-white text-center py-5" style="height: 60vh; background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1600x600/2c3e50/ffffff?text=Street+Style+2025');">
+                    <div class="container h-100 d-flex flex-column justify-content-center">
+                        <h1 class="display-3 fw-bold">Bộ sưu tập mới</h1>
+                        <p class="lead">Giảm giá lên đến 40% cho thành viên mới</p>
+                        <a href="#" class="btn btn-light btn-lg mt-3">Mua ngay <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-secondary text-white text-center py-5" style="height: 60vh; background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1600x600/5d6d7e/f8f9fa?text=Thời+Trang+Công+Sở');">
+                    <div class="container h-100 d-flex flex-column justify-content-center">
+                        <h2 class="display-4 fw-semibold">Phong cách công sở thanh lịch</h2>
+                        <p class="lead">Áo sơ mi, quần tây, blazer cao cấp</p>
+                        <a href="#" class="btn btn-outline-light btn-lg">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-info text-dark text-center py-5" style="height: 60vh; background-size: cover; background-position: center; background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://placehold.co/1600x600/85c1e9/1c2833?text=Phụ+Kiện+Thời+Thượng');">
+                    <div class="container h-100 d-flex flex-column justify-content-center">
+                        <h2 class="display-4 fw-bold">Phụ kiện độc quyền</h2>
+                        <p class="lead">Đồng hồ, túi xách, kính mát - Giảm 20%</p>
+                        <a href="#" class="btn btn-dark btn-lg">Xem ưu đãi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <main class="container mb-5">
+        <!-- ========== DANH MỤC NỔI BẬT (Grid hàng ngang) ========== -->
+        <div class="row text-center g-4 mb-5">
+            <div class="col-6 col-md-3">
+                <div class="card border-0 bg-body-tertiary p-3 h-100 shadow-sm">
+                    <i class="bi bi-stars fs-1 text-primary"></i>
+                    <h5 class="card-title mt-2">Hàng mới về</h5>
+                    <p class="card-text text-secondary">BST mới nhất 2025</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 bg-body-tertiary p-3 h-100 shadow-sm">
+                    <i class="bi bi-truck fs-1 text-success"></i>
+                    <h5 class="card-title mt-2">Miễn phí vận chuyển</h5>
+                    <p class="card-text text-secondary">Đơn hàng từ 500k</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 bg-body-tertiary p-3 h-100 shadow-sm">
+                    <i class="bi bi-arrow-repeat fs-1 text-warning"></i>
+                    <h5 class="card-title mt-2">Đổi trả 30 ngày</h5>
+                    <p class="card-text text-secondary">Đổi trả dễ dàng</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 bg-body-tertiary p-3 h-100 shadow-sm">
+                    <i class="bi bi-shield-lock fs-1 text-danger"></i>
+                    <h5 class="card-title mt-2">Thanh toán an toàn</h5>
+                    <p class="card-text text-secondary">Bảo mật tuyệt đối</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SẢN PHẨM NỔI BẬT (Product grid) ========== -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h3 fw-bold"><i class="bi bi-fire"></i> Sản phẩm nổi bật</h2>
+            <a href="#" class="text-decoration-none">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+        <div class="row g-4">
+            <!-- Sản phẩm 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Áo+Thun+Basic" class="card-img-top" alt="Áo thun">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Hot</span>
+                        <h5 class="card-title fw-semibold">Áo thun cotton 100%</h5>
+                        <p class="card-text text-secondary small">Chất liệu mềm mịn, thoáng mát</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">299.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">450.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Quần+Jeans" class="card-img-top" alt="Quần jeans">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Giảm 20%</span>
+                        <h5 class="card-title fw-semibold">Quần jeans rách cá tính</h5>
+                        <p class="card-text text-secondary small">Phong cách đường phố, co giãn tốt</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">559.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">699.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 3 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Giày+Thể+Thao" class="card-img-top" alt="Giày thể thao">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Bán chạy</span>
+                        <h5 class="card-title fw-semibold">Giày chạy bộ nhẹ</h5>
+                        <p class="card-text text-secondary small">Đế cao su, êm chân, chống trơn</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">890.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">1.290.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 4 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Túi+Xách+Nữ" class="card-img-top" alt="Túi xách">
+                    <div class="card-body">
+                        <span class="badge bg-info text-dark mb-2">Mới</span>
+                        <h5 class="card-title fw-semibold">Túi xách da thật</h5>
+                        <p class="card-text text-secondary small">Phong cách thanh lịch, nhiều ngăn</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">1.199.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">1.590.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 5 (thêm để đủ 2 hàng trên màn hình lớn) -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Đồng+Hồ" class="card-img-top" alt="Đồng hồ">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Limited</span>
+                        <h5 class="card-title fw-semibold">Đồng hồ nam thể thao</h5>
+                        <p class="card-text text-secondary small">Mặt số lớn, chống nước 5ATM</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">2.490.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">3.200.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 6 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Mũ+Lưỡi+Trai" class="card-img-top" alt="Mũ lưỡi trai">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Phụ kiện</span>
+                        <h5 class="card-title fw-semibold">Mũ lưỡi trai unisex</h5>
+                        <p class="card-text text-secondary small">Chất vải denim, điều chỉnh dây</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">199.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 7 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Áo+Khoác+Denim" class="card-img-top" alt="Áo khoác denim">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Style mới</span>
+                        <h5 class="card-title fw-semibold">Áo khoác denim nam</h5>
+                        <p class="card-text text-secondary small">Phong cách retro, form rộng</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">789.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">1.050.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 8 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/400x400/eee/ddd?text=Son+Lì" class="card-img-top" alt="Son môi">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hot</span>
+                        <h5 class="card-title fw-semibold">Son lì siêu mịn</h5>
+                        <p class="card-text text-secondary small">8 màu trendy, lên màu chuẩn</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-primary">179.000₫</span>
+                            <span class="text-decoration-line-through text-secondary">299.000₫</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <button class="btn btn-outline-primary w-100"><i class="bi bi-cart-plus"></i> Thêm giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== BANNER QUẢNG CÁO GIỮA TRANG (dùng card + background) ========== -->
+        <div class="row my-5 g-4">
+            <div class="col-md-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                    <img src="https://placehold.co/800x400/1e2a3a/white?text=Thời+Trang+Nam" class="card-img opacity-75" alt="Banner nam">
+                    <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <h3 class="card-title fw-bold">Thời trang nam</h3>
+                        <p class="card-text">Áo sơ mi, quần tây, blazer - Giảm đến 30%</p>
+                        <a href="#" class="btn btn-light w-50">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                    <img src="https://placehold.co/800x400/4a2a3b/white?text=Thời+Trang+Nữ" class="card-img opacity-75" alt="Banner nữ">
+                    <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <h3 class="card-title fw-bold">Thời trang nữ</h3>
+                        <p class="card-text">Đầm dự tiệc, váy công sở, phụ kiện sang trọng</p>
+                        <a href="#" class="btn btn-light w-50">Mua sắm ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== DANH MỤC SẢN PHẨM THEO LOẠI (dùng list group / badges) ========== -->
+        <div class="my-5">
+            <h2 class="h3 fw-bold mb-3"><i class="bi bi-grid-3x3-gap-fill"></i> Danh mục phổ biến</h2>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-bag"></i> Túi xách</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-watch"></i> Đồng hồ</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-sunglasses"></i> Kính mát</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-gem"></i> Trang sức</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-bag-plus"></i> Phụ kiện nam</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-tshirt"></i> Áo thun</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2"><i class="bi bi-shoe"></i> Giày dép</a>
+            </div>
+        </div>
+
+        <!-- ========== ĐÁNH GIÁ KHÁCH HÀNG (testimonials) ========== -->
+        <div class="bg-body-tertiary p-4 rounded-4 my-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold"><i class="bi bi-chat-quote"></i> Khách hàng nói gì?</h2>
+                <p class="text-secondary">Hơn 10.000 khách hàng hài lòng mỗi tháng</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex text-warning mb-2">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"Chất lượng sản phẩm tuyệt vời, giao hàng nhanh. ShopMode luôn là lựa chọn hàng đầu của tôi."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <i class="bi bi-person-circle fs-3 me-2"></i>
+                                <strong>Minh Anh</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex text-warning mb-2">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <p class="card-text">"Mẫu mã đẹp, đúng hình, lại được tư vấn nhiệt tình. Sẽ ủng hộ dài dài."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <i class="bi bi-person-circle fs-3 me-2"></i>
+                                <strong>Thanh Tùng</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex text-warning mb-2">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"Giá cả hợp lý, nhiều chương trình khuyến mãi hấp dẫn. Đặc biệt miễn phí vận chuyển rất tiện lợi."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <i class="bi bi-person-circle fs-3 me-2"></i>
+                                <strong>Phương Linh</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== ĐĂNG KÝ NHẬN TIN (newsletter) ========== -->
+        <div class="p-4 p-md-5 rounded-4 text-center bg-dark text-white my-5">
+            <h3 class="fw-bold">Đăng ký nhận ưu đãi</h3>
+            <p class="lead">Nhận ngay voucher 50k cho đơn hàng đầu tiên + thông tin khuyến mãi mới nhất.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control form-control-lg" placeholder="Email của bạn">
+                        <button class="btn btn-primary btn-lg" type="button">Đăng ký</button>
+                    </div>
+                    <small class="text-secondary">Chúng tôi không spam, chỉ gửi ưu đãi tốt nhất.</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER (Bootstrap grid + list) ========== -->
+    <footer class="bg-body-tertiary pt-5 pb-4 border-top mt-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold"><i class="bi bi-bag-heart"></i> ShopMode</h5>
+                    <p class="text-secondary">Nền tảng thời trang trực tuyến hàng đầu, mang đến phong cách đẳng cấp và chất lượng vượt trội.</p>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>Liên kết nhanh</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Trang chủ</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Sản phẩm</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Hỗ trợ khách hàng</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Vận chuyển & giao nhận</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Liên hệ</h6>
+                    <address class="text-secondary">
+                        <i class="bi bi-geo-alt"></i> 123 Đường Thời Trang, Quận 1, TP.HCM<br>
+                        <i class="bi bi-telephone"></i> 1900 1234<br>
+                        <i class="bi bi-envelope"></i> support@shopmode.vn
+                    </address>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center text-secondary small">
+                &copy; 2025 ShopMode - Tất cả các quyền được bảo lưu. Thiết kế thuần Bootstrap 5.3 không CSS tùy chỉnh.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (bao gồm Popper) để hỗ trợ navbar toggler, carousel, dropdowns... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
